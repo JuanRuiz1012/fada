@@ -5,11 +5,12 @@
 #3. toma N primeros elementos de la pila los suma y apilo los elemntos al valor obtenido 
 #4. imprime el valor de la pila
 
-import sys
+#poner el tope al principio o al final
 
 def main():
     stack = []
     while True:
+        
         print("1. Agregar un elemento")
         print("2. Quitar los dos ultimos elementos de la pila calcular la suma y añadir el resultado a la pila")
         print("3. Toma N primeros elementos de la pila los suma y apilo los elemntos al valor obtenido")
@@ -23,9 +24,9 @@ def main():
             stack.append(elemento)
         elif opcion == 2:
             if len(stack) > 1:
-                stack.pop()
-                stack.pop()
-                suma = stack.pop() + stack.pop()
+                c = stack.pop()
+                d = stack.pop()
+                suma = c+ d
                 stack.append(suma)
         elif opcion == 3:
             if len(stack) > 0:
@@ -33,7 +34,7 @@ def main():
                 suma = 0
                 for i in range(N):
                     suma += stack.pop()
-                stack.append(suma)
+                stack.insert(0, suma)
         elif opcion == 4:
             if len(stack) > 0:
                 print(stack)
