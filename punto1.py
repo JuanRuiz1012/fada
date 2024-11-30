@@ -5,7 +5,10 @@
 #3. toma N primeros elementos de la pila los suma y apilo los elemntos al valor obtenido 
 #4. imprime el valor de la pila
 
-#poner el tope al principio o al final
+################################
+####   EL TOPE ES EL FINAL  ####
+################################
+
 
 def main():
     stack = []
